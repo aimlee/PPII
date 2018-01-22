@@ -1,0 +1,6 @@
+F:\c# labs\week 1\traingle\traingle\traingle\obj\Debug\traingle.csproj.CoreCompileInputs.cache
+F:\c# labs\week 1\traingle\traingle\traingle\bin\Debug\traingle.exe.config
+F:\c# labs\week 1\traingle\traingle\traingle\bin\Debug\traingle.exe
+F:\c# labs\week 1\traingle\traingle\traingle\bin\Debug\traingle.pdb
+F:\c# labs\week 1\traingle\traingle\traingle\obj\Debug\traingle.exe
+F:\c# labs\week 1\traingle\traingle\traingle\obj\Debug\traingle.pdb

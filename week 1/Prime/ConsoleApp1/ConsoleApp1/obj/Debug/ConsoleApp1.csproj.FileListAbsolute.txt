@@ -1,0 +1,6 @@
+F:\c# labs\week 1\Prime\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+F:\c# labs\week 1\Prime\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+F:\c# labs\week 1\Prime\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+F:\c# labs\week 1\Prime\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+F:\c# labs\week 1\Prime\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+F:\c# labs\week 1\Prime\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

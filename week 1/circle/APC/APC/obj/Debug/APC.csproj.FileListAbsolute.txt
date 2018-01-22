@@ -1,0 +1,6 @@
+F:\c# labs\week 1\circle\APC\APC\obj\Debug\APC.csproj.CoreCompileInputs.cache
+F:\c# labs\week 1\circle\APC\APC\bin\Debug\APC.exe.config
+F:\c# labs\week 1\circle\APC\APC\bin\Debug\APC.exe
+F:\c# labs\week 1\circle\APC\APC\bin\Debug\APC.pdb
+F:\c# labs\week 1\circle\APC\APC\obj\Debug\APC.exe
+F:\c# labs\week 1\circle\APC\APC\obj\Debug\APC.pdb
