@@ -71,6 +71,7 @@ namespace FarManagerExample
                         {
                             dir = dir.Parent;
                             pos = 0;
+
                         }
                         if (z.GetType() == typeof(FileInfo))
                         {

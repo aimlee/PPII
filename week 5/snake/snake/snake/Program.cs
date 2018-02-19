@@ -11,7 +11,7 @@ namespace snake
         static void Main(string[] args)
         {
             Console.CursorVisible = false;
-            Console.SetWindowSize(103, 17);
+            Console.SetWindowSize(103, 30);
             snake Snake = new snake();
             Food Food = new Food();
             wall Wall = new wall();
@@ -58,8 +58,8 @@ namespace snake
                 if (Snake.body[0].x > 102)
                     Snake.body[0].x = 0;
                 if (Snake.body[0].y < 0)
-                    Snake.body[0].y = 16;
-                if (Snake.body[0].y > 16)
+                    Snake.body[0].y = 29;
+                if (Snake.body[0].y > 29)
                     Snake.body[0].y = 0;
 
 

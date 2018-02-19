@@ -10,13 +10,15 @@ namespace snake
     class wall
     {
         public List<Point> body;
-        public char sign;
+        public char sign, sign2, sign3;
         public ConsoleColor color;
 
         public wall()
         {
             color = ConsoleColor.White;
             sign = '|';
+            sign2 = '_';
+            sign3 = '-';
             body = new List<Point>();
 
             LoadLevel(1);
@@ -33,12 +35,12 @@ namespace snake
             int i = 0;
             int row = 0;
 
-            while (i < 17)
+            while (i < 30)
             {
                 line = sr.ReadLine();
                 for(int a = 0; a<line.Length; a++)
                 {
-                    if(line[a]== '|')
+                    if(line[a] == '|' || line[a] == '_' || line[a] == '-')
                     {
                         body.Add(new Point(a, row));
                     }
@@ -53,6 +55,8 @@ namespace snake
             {
                 Console.SetCursorPosition(p.x, p.y);
                 Console.Write(sign);
+                Console.Write(sign2);
+                Console.Write(sign3);
             }
         }
     }
