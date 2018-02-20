@@ -4,20 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace snake
+namespace Snake
 {
     class Food
     {
 
-        snake Snake = new snake();
-        
+        Snake snake = new Snake();
+
         wall Wall = new wall();
 
         public Point Location;
         public char sign;
         public ConsoleColor color;
 
-            public Food()
+        public Food()
         {
             sign = '*';
             color = ConsoleColor.Red;
@@ -30,15 +30,15 @@ namespace snake
 
             for (int z = 0; z < Wall.body.Count; ++z)
             {
-                if(x == Wall.body[z].x && y == Wall.body[z].y)
+                if (x == Wall.body[z].x && y == Wall.body[z].y)
                 {
-                     x = new Random().Next(14, 96);
-                     y = new Random().Next(7, 21);
+                    x = new Random().Next(14, 96);
+                    y = new Random().Next(7, 21);
                 }
             }
-            for (int z = 0; z < Snake.body.Count; ++z)
+            for (int z = 0; z < snake.body.Count; ++z)
             {
-                if(x == Snake.body[z].x && y == Snake.body[z].y)
+                if (x == snake.body[z].x && y == snake.body[z].y)
                 {
                     x = new Random().Next(14, 96);
                     y = new Random().Next(7, 21);
@@ -47,8 +47,8 @@ namespace snake
 
             Location = new Point(x, y);
 
-            
-        }   
+
+        }
 
         public void Draw()
         {

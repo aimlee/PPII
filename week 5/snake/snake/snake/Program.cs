@@ -59,11 +59,8 @@ namespace snake
                 if (Snake.GameOver(Wall))
                 {
                     Snake.a = 0;
-                    
-                        Snake.body.Clear();
-                    
 
-                    
+                    Console.Clear();
              
                     Snake.body = new List<Point>();
                     Snake.body.Add(new Point(16, 7));
