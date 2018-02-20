@@ -16,23 +16,17 @@ namespace snake
             Food Food = new Food();
             wall Wall = new wall();
 
-            for (int i = 1; i < Snake.body.Count - 1; ++i)
-            {
-                if (Snake.body[0].x == Snake.body[i].x && Snake.body[0].y == Snake.body[i].y)
-                {
-                    Snake.body = new List<Point>();
-                    Snake.body.Add(new Point(0, 1));
-                    Snake.body.Add(new Point(0, 2));
-                    Snake.body.Add(new Point(0, 3));
+            
 
-                }
-
-                while (true)
+            while (true)
             {
 
                 Snake.Draw();
                 Food.Draw();
                 Wall.Draw();
+                    Console.SetCursorPosition(0, 1);
+                    Console.WriteLine("Score :");
+                    Console.WriteLine(Snake.a);
 
 
                 ConsoleKeyInfo btn = Console.ReadKey();
@@ -53,25 +47,41 @@ namespace snake
                 }
 
 
-                if (Snake.body[0].x < 0)
-                    Snake.body[0].x = 102;
-                if (Snake.body[0].x > 102)
-                    Snake.body[0].x = 0;
-                if (Snake.body[0].y < 0)
-                    Snake.body[0].y = 29;
-                if (Snake.body[0].y > 29)
-                    Snake.body[0].y = 0;
+                if (Snake.body[0].x < 14)
+                    Snake.body[0].x = 96;
+                if (Snake.body[0].x > 96)
+                    Snake.body[0].x = 14;
+                if (Snake.body[0].y < 7)
+                    Snake.body[0].y = 21;
+                if (Snake.body[0].y > 21)
+                    Snake.body[0].y = 7;
 
+                if (Snake.GameOver(Wall))
+                {
+                    Snake.a = 0;
+                    
+                        Snake.body.Clear();
+                    
 
+                    
+             
+                    Snake.body = new List<Point>();
+                    Snake.body.Add(new Point(16, 7));
+                    Snake.body.Add(new Point(15, 7));
+                    Snake.body.Add(new Point(14, 7));
+                }
 
                 if (Snake.CanEat(Food))
                 {
+                        
                     Food.setRandomPosition();
-                }
+
+                        
+                    }
 
             
                 }
-            }
+            
         }
     }
 }

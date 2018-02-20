@@ -15,12 +15,12 @@ namespace snake
 
         public snake()
         {
-            sign = 'O';
+            sign = 'Z';
             color = ConsoleColor.Green;
             body = new List<Point>();
-            body.Add(new Point(0, 1));
-            body.Add(new Point(0, 2));
-            body.Add(new Point(0, 3));
+            body.Add(new Point(16, 7));
+            body.Add(new Point(15, 7));
+            body.Add(new Point(14, 7));
 
         }
         public void Move(int dx, int dy)
@@ -36,12 +36,13 @@ namespace snake
             body[0].x = body[0].x + dx;
             body[0].y = body[0].y + dy;
         }
-    
+        public int a = 0;
         public bool CanEat(Food food)
         {
+             
             if (food.Location.x == body[0].x && food.Location.y == body[0].y)
             {
-               
+                a++;   
                 body.Add(new Point(body[body.Count - 1].x, body[body.Count - 1].y));
                 return true;
             }
@@ -58,12 +59,29 @@ namespace snake
                 {
                     Console.ForegroundColor = color;
                 }
-                    Console.SetCursorPosition(p.x, p.y);
-                    Console.Write(sign);
-                    i++;
-                
+                Console.SetCursorPosition(p.x, p.y);
+                Console.Write(sign);
+                i++;
+            }
+        }
+                public bool GameOver(wall Wall)
+            {
+                for (int i = 1; i < body.Count; i++)
+                {
+                    if (body[0].x == body[i].x && body[0].y == body[i].y)
+                        return true;
+                }
+                for (int i = 0; i < Wall.body.Count; i++)
+                {
+                    if (body[0].x == Wall.body[i].x && body[0].y == Wall.body[i].y)
+                        return true;
+                }
+                return false;
+
             }
 
-        }
+            
+        
+        
     }
 }
