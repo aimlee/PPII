@@ -1,62 +1,60 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
-namespace lab2
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace minprime
 {
-    class MainClass
+    class minprime
     {
-        public static bool IsPrime(int a)
+        public int min = 2;
+        public void findprime()
         {
-            for (int i = 2; i * i <= a; i++)
+            FileStream fs = new FileStream(@"C:\Users\local\Desktop\PP\week 2\numbers.txt", FileMode.Open, FileAccess.Read);
+            StreamReader sr = new StreamReader(fs);
+            string s = sr.ReadLine();
+            string[] arr = s.Split(' ');
+            for (int i = 0; i < arr.Length; ++i)
             {
-                if (a % i == 0)
-                    return false;
-
-            }
-            return true;
-        }
-
-        public static void Main(string[] args)
-        {
-            int mini = -1, k = -1, p = 0;
-            string line = File.ReadAllText(@"F:\c# labs\week 2\2 lab\qw.txt");
-            string[] arr = line.Split(' ');
-            for (int i = 0; i < arr.Length; i++)
-            {
-                if (int.Parse(arr[i]) >= 2)
+                bool res = true;
+                int n = int.Parse(arr[i]);
+                if (n == 1)
                 {
-                    if (IsPrime(int.Parse(arr[i])) == true)
-                    {
-                        k = i;
-                        mini = int.Parse(arr[i]);
-                        break;
-                    }
+                    res = false;
                 }
-            }
-            if (k != -1 && mini != -1)
-            {
-                string l = " ";
-                for (int i = k; i < arr.Length; i++)
+                if (n > 1)
                 {
-                    if (int.Parse(arr[i]) > 1)
+                    for (int j = 2; j <= Math.Sqrt(n); ++j)
                     {
-                        if (IsPrime(int.Parse(arr[i])) == true && mini > int.Parse(arr[i]))
+                        if (n % j == 0)
                         {
-                            mini = int.Parse(arr[i]);
-                            p = i;
+                            res = false;
                         }
-
-
                     }
                 }
-                l += arr[p];
-                if (l.Length >= 2)
+                if (n < min && res == true)
                 {
-                    File.WriteAllText(@"F:\c# labs\week 3\prime.txt", l);
-                    Console.WriteLine(l);
+                    min = n;
                 }
-                Console.ReadKey();
             }
-
+            FileStream fw = new FileStream(@"C:\Users\local\Desktop\PP\week 2\answer.txt", FileMode.Open, FileAccess.Write);
+            StreamWriter sw = new StreamWriter(fw);
+            sw.Write("min prime =" + min);
+            fs.Close();
+            sr.Close();
+            sw.Close();
+            fw.Close();
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            minprime m = new minprime();
+            m.findprime();
+            Console.WriteLine("min prime=" + m.min);
+            Console.ReadKey();
         }
     }
 }

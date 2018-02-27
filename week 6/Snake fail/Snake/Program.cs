@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -7,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
-    [Serializable]
+    
     class Program
     {
 
@@ -94,6 +96,15 @@ namespace Snake
                     break;
             }
             Game.Draw();
+        }
+        static void ser()
+        {
+            FileStream fs = new FileStream(@"F:\c# labs\week 6\Snake fail\Snake\data.der", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            BinaryFormatter bf = new BinaryFormatter();
+
+            bf.Serialize(fs, Game.snake);
+            
+            
         }
 
         static void Main(string[] args)

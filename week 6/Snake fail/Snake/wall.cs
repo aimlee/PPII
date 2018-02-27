@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
+    [Serializable]
     class wall
     {
         public List<Point> body;
