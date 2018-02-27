@@ -5,15 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Snake
-{
-    
+{ [Serializable]
     class Point
     {
+       
         public int x, y;
+
         public Point(int _x, int _y)
         {
-            int x = _x;
-            int y = _y;
+            x = _x;
+            y = _y;
         }
     }
 }

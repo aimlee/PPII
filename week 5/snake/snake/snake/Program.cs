@@ -10,13 +10,15 @@ namespace snake
     {
         static void Main(string[] args)
         {
+            
+        
             Console.CursorVisible = false;
             Console.SetWindowSize(103, 30);
             snake Snake = new snake();
             Food Food = new Food();
             wall Wall = new wall();
 
-            
+             int level = 1;
 
             while (true)
             {
@@ -75,8 +77,7 @@ namespace snake
 
                         
                     }
-
-            
+                
                 }
             
         }

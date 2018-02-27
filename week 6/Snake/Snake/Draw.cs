@@ -6,14 +6,7 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
-    
-    class Point
+    class Draw
     {
-        public int x, y;
-        public Point(int _x, int _y)
-        {
-            int x = _x;
-            int y = _y;
-        }
     }
 }

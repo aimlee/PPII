@@ -5,14 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Snake
-{
+{[Serializable]
     class Food
     {
-        Snake Snake = new Snake();
-        Wall Wall = new Wall();
-        public char sign;
-        public ConsoleColor  color;
+
+        Snake snake = new Snake();
+
+        wall Wall = new wall();
+
         public Point Location;
+        public char sign;
+        public ConsoleColor color;
 
         public Food()
         {
@@ -20,21 +23,23 @@ namespace Snake
             color = ConsoleColor.Red;
             setRandomPosition();
         }
+
         public void setRandomPosition()
         {
             int x = new Random().Next(14, 96);
             int y = new Random().Next(7, 21);
+
             for (int z = 0; z < Wall.body.Count; ++z)
             {
-             while(x != Wall.body[z].x && y != Wall.body[z].y)
+                while (x == Wall.body[z].x && y== Wall.body[z].y)
                 {
                     x = new Random().Next(14, 96);
                     y = new Random().Next(7, 21);
                 }
             }
-            for (int z = 0; z < Snake.body.Count; ++z)
+            for (int z = 0; z < snake.body.Count; ++z)
             {
-            while  (x != Snake.body[z].x && y != Snake.body[z].y)
+                while (x == snake.body[z].x && y == snake.body[z].y)
                 {
                     x = new Random().Next(14, 96);
                     y = new Random().Next(7, 21);
@@ -42,7 +47,10 @@ namespace Snake
             }
 
             Location = new Point(x, y);
+
+
         }
+
         public void Draw()
         {
             Console.ForegroundColor = color;

@@ -9,6 +9,8 @@ namespace snake
 {
     class wall
     {
+        snake Snake = new snake();
+        wall Wall = new wall();
         public List<Point> body;
         public char sign;
         public ConsoleColor color;
@@ -19,8 +21,17 @@ namespace snake
             sign = '|';
             
             body = new List<Point>();
+            int z = 0;
+            
+                if (Snake.a % 3 == 0)
+                {
+                    z++;
+                    LoadLevel(z);
 
-            LoadLevel(1);
+
+
+                }
+            
         }
 
         public void LoadLevel(int num)

@@ -4,16 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Snake
+namespace Product
 {
-    
-    class Point
+    class Program
     {
-        public int x, y;
-        public Point(int _x, int _y)
+        static void Main(string[] args)
         {
-            int x = _x;
-            int y = _y;
         }
     }
 }

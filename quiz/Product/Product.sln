@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake", "Snake\Snake.csproj", "{C10517DC-AA39-4CBC-B067-C12172BD03E1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product", "Product\Product.csproj", "{E27CDB22-0BE1-4954-904A-558E59735BFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C10517DC-AA39-4CBC-B067-C12172BD03E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C10517DC-AA39-4CBC-B067-C12172BD03E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C10517DC-AA39-4CBC-B067-C12172BD03E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C10517DC-AA39-4CBC-B067-C12172BD03E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E27CDB22-0BE1-4954-904A-558E59735BFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E27CDB22-0BE1-4954-904A-558E59735BFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E27CDB22-0BE1-4954-904A-558E59735BFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E27CDB22-0BE1-4954-904A-558E59735BFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {4A12C0BE-9431-41CA-85AA-4A1702379773}
+		SolutionGuid = {B16B155C-3964-49E8-A2F8-565BCFBF54BF}
 	EndGlobalSection
 EndGlobal
