@@ -21,16 +21,10 @@ namespace snake
             sign = '|';
             
             body = new List<Point>();
-            int z = 0;
-            
-                if (Snake.a % 3 == 0)
-                {
-                    z++;
-                    LoadLevel(z);
+      
+                    LoadLevel(0);
 
 
-
-                }
             
         }
 
@@ -45,7 +39,7 @@ namespace snake
             int i = 0;
             int row = 0;
 
-            while (i < 25)
+            while (i < 30)
             {
                 line = sr.ReadLine();
                 for(int a = 0; a<line.Length; a++)

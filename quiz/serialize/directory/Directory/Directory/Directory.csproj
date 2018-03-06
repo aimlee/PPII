@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{825BC764-867F-488D-84E5-4FD875FD4FEA}</ProjectGuid>
+    <ProjectGuid>{9D19C5C7-03C0-44F2-8577-A2CCADA67158}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Snake</RootNamespace>
-    <AssemblyName>Snake</AssemblyName>
+    <RootNamespace>Directory</RootNamespace>
+    <AssemblyName>Directory</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,14 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Food.cs" />
-    <Compile Include="Game.cs" />
-    <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Save.cs" />
-    <Compile Include="snake.cs" />
-    <Compile Include="wall.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

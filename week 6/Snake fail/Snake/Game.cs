@@ -28,11 +28,7 @@ namespace Snake
 
         public static int a = 0;
 
-        static void ser()
-        {
-            FileStr
-        }
-
+        
         public static void Draw()
         {
             snake.Draw();

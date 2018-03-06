@@ -34,7 +34,7 @@ namespace Snake
             FileStream fs = new FileStream(Path, FileMode.Open, FileAccess.Read);
             StreamReader sr = new StreamReader(fs);
             string line = "";
-            int i = 0;
+            int i = 0; 
             int row = 0;
 
             while (i < 25)
