@@ -17,14 +17,14 @@ namespace lab_1
             InitializeComponent();
         }
 
-        RichTextBox display;
+        RichTextBox  bdisplay;
 
        
         
 
             private void number_Click (object sender, EventArgs e)
         {
-            display.Text="0";
+           
             Button btn = sender as Button;
             display.Text = display.Text + btn.Text;
         }
@@ -49,11 +49,7 @@ namespace lab_1
 
         }
 
-        private void richTextBox2_TextChanged(object sender, EventArgs e)
-        {
-            richTextBox2.Text = DateTime.Now.ToLongTimeString();
-        }
-
+      
         private void button24_Click(object sender, EventArgs e)
         {
 
@@ -70,6 +66,11 @@ namespace lab_1
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
