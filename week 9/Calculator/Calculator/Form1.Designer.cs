@@ -262,7 +262,7 @@
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(50, 50);
             this.button11.TabIndex = 10;
-            this.button11.Text = ".";
+            this.button11.Text = ",";
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
@@ -598,6 +598,7 @@
             this.display.Name = "display";
             this.display.Size = new System.Drawing.Size(280, 73);
             this.display.TabIndex = 30;
+            this.display.Text = "0";
             // 
             // button15
             // 
@@ -738,7 +739,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(279, 466);
+            this.ClientSize = new System.Drawing.Size(279, 465);
             this.Controls.Add(this.CE);
             this.Controls.Add(this.button26);
             this.Controls.Add(this.label1);
