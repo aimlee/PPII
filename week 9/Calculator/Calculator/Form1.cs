@@ -12,8 +12,8 @@ namespace Calculator
 {
     public partial class Form1 : Form
     {
-        double firstNumber = 0, secondNumber = 0, result = 0, b=0;
-        string operation = "";
+        public double firstNumber = 0, secondNumber = 0, result = 0, b=0;
+        public string operation = "";
         public Form1()
         {
             InitializeComponent();
@@ -36,11 +36,11 @@ namespace Calculator
         private void button11_Click(object sender, EventArgs e)
         {
             if (display.Text == "")
-                display.Text = "0,";
-            else if (display.Text.Contains(","))
+                display.Text = "0.";
+            else if (display.Text.Contains("."))
                 display.Text = display.Text;
             else
-                display.Text = display.Text + ",";
+                display.Text = display.Text + ".";
         }
 
         private void button33_Click(object sender, EventArgs e)
@@ -95,6 +95,8 @@ public double a=0;
             {
                 a = double.Parse(display.Text);
                 firstNumber = double.Parse(display.Text);
+               
+                    
             }
 
             else 
@@ -110,7 +112,7 @@ public double a=0;
                     
                     display.Text = "";
                     break;
-                case "-":
+                case "-": 
                     
                     display.Text = "";
                     break;
@@ -139,7 +141,7 @@ public double a=0;
                     display.Text = Math.Sin(firstNumber*Math.PI/180).ToString();
                     break;
                 case "cos":
-                    display.Text = Math.Cos(firstNumber*Math.PI/180).ToString();
+                    display.Text = Math.Cos((firstNumber*180)/Math.PI).ToString();
                     break;
                 case "x^2":
                     display.Text = Math.Pow(firstNumber,2).ToString();
@@ -177,12 +179,13 @@ public double a=0;
                 case "+":
                     result = firstNumber + b;
                     firstNumber = result;
-                    
                     break;
+
                 case "-":
                     result = firstNumber - b;
                     firstNumber = result;
                     break;
+
                 case "*":
                     result = firstNumber * b;
                     firstNumber = result;
@@ -208,8 +211,10 @@ public double a=0;
                     firstNumber = result;
                     break;
             }
+            
             display.Text = result.ToString();
         }
+
         public static double MC;
         private void MS_Click(object sender, EventArgs e)
         {

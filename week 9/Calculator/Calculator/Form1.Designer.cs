@@ -596,6 +596,7 @@
             this.display.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.display.Location = new System.Drawing.Point(1, 60);
             this.display.Name = "display";
+            this.display.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.display.Size = new System.Drawing.Size(280, 73);
             this.display.TabIndex = 30;
             this.display.Text = "0";
