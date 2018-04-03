@@ -66,6 +66,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button26 = new System.Windows.Forms.Button();
             this.CE = new System.Windows.Forms.Button();
+            this.button35 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -735,12 +736,23 @@
             this.CE.UseVisualStyleBackColor = false;
             this.CE.Click += new System.EventHandler(this.CE_Click);
             // 
+            // button35
+            // 
+            this.button35.Location = new System.Drawing.Point(287, 250);
+            this.button35.Name = "button35";
+            this.button35.Size = new System.Drawing.Size(75, 23);
+            this.button35.TabIndex = 42;
+            this.button35.Text = "x^3";
+            this.button35.UseVisualStyleBackColor = true;
+            this.button35.Click += new System.EventHandler(this.operation_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(279, 465);
+            this.ClientSize = new System.Drawing.Size(447, 465);
+            this.Controls.Add(this.button35);
             this.Controls.Add(this.CE);
             this.Controls.Add(this.button26);
             this.Controls.Add(this.label1);
@@ -826,6 +838,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button26;
         private System.Windows.Forms.Button CE;
+        private System.Windows.Forms.Button button35;
     }
 }
 

@@ -146,7 +146,9 @@ public double a=0;
                 case "x^2":
                     display.Text = Math.Pow(firstNumber,2).ToString();
                     break;
-                
+                case "x^3":
+                    display.Text = Math.Pow(firstNumber, 3).ToString();
+                    break;
                 case "ln":
                     display.Text = Math.Log(firstNumber, Math.E).ToString();
                     break;
